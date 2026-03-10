@@ -1,1 +1,6 @@
 Name, Purpose, Cost (USD), Quantity, Total (USD), Link, Distributor
+ST7735S, Main display, 9.71, 1, 9.71, https://eckstein-shop.de/12C8inch128x160SPISerialTFTLCDDisplayModul2BSDCardSlotArduinoKompatibel, Eckstein
+XIAO ESP32 C3, To control the second display, 7.76, 1, 7.76, https://eckstein-shop.de/Seeed-Studio-XIAO-ESP32C3-Tiny-MCU-Board-with-Wi-Fi-and-BLE, Eckstein
+SSD1306, Second small display, 4.83, 1, 4.83, https://eckstein-shop.de/QITA02C96ZollOLEDDisplaySSD1306128x64I2C2FIICModulforArduinoRaspberryPi, Eckstein
+Rotary encoder, Volume control, 1.90, 1, 1.90, https://eckstein-shop.de/QITAPotentiometerDrehreglerKY-040RotaryEncoderModulforArduino, Eckstein
+ESP32 C3 mini, Main dev board, 4.83, 1, 4.83, https://eckstein-shop.de/WaveShare-ESP32-C3-Mini-Development-Board-ESP32-C3FN4-160MHz-24GHz-Wi-Fi-Bluetooth-5, Eckstein
