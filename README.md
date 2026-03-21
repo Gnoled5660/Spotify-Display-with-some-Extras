@@ -10,4 +10,8 @@ After looking at all the starter projects, the spotify display seemed to be very
 <img width="803" height="538" alt="Bildschirmfoto 2026-03-10 um 18 05 30" src="https://github.com/user-attachments/assets/9e3d4438-93a3-4a1b-8150-edf8820e3f2a" />
 <img width="944" height="454" alt="Bildschirmfoto 2026-03-10 um 19 03 02" src="https://github.com/user-attachments/assets/34e56da0-98ab-4c35-a233-65c2299b8093" />
 <img width="839" height="539" alt="Bildschirmfoto 2026-03-09 um 22 01 28" src="https://github.com/user-attachments/assets/94620fbd-c0c4-44e3-a394-9b021d0f29f1" />
+
+# Final result
+This is how the final result looks like. The cable management insde the box, looks a bit messy, but it works.
 <img width="4032" height="3024" alt="Foto" src="https://github.com/user-attachments/assets/52fa2576-5458-4fb9-934c-eb6db7ecb355" />
+<img width="3021" height="3506" alt="Foto" src="https://github.com/user-attachments/assets/cd90341a-4474-4cb3-a371-b1874801d1b5" />
