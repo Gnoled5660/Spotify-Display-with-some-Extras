@@ -10,5 +10,5 @@ After looking at all the starter projects, the spotify display seemed to be very
 <img width="803" height="538" alt="Bildschirmfoto 2026-03-10 um 18 05 30" src="https://github.com/user-attachments/assets/9e3d4438-93a3-4a1b-8150-edf8820e3f2a" />
 <img width="944" height="454" alt="Bildschirmfoto 2026-03-10 um 19 03 02" src="https://github.com/user-attachments/assets/34e56da0-98ab-4c35-a233-65c2299b8093" />
 <img width="839" height="539" alt="Bildschirmfoto 2026-03-09 um 22 01 28" src="https://github.com/user-attachments/assets/94620fbd-c0c4-44e3-a394-9b021d0f29f1" />
-![C2A7AC61-62E9-4151-997D-3951E4602FF1_1_105_c](https://github.com/user-attachments/assets/42956d6b-97c8-4cc3-8f0b-85c273feef3f)
-![E42C8037-4B5D-4F44-A9D3-FEAF0322057B_1_201_a](https://github.com/user-attachments/assets/3b0b2926-fc59-4a96-a21b-ca550cf0a0da)
+![IMG_8533](https://github.com/user-attachments/assets/25144a2a-f2b4-489b-8930-731877395a63)
+![IMG_8536](https://github.com/user-attachments/assets/e3cd62b0-a809-4e7e-898b-3e8170e6f2b4)
