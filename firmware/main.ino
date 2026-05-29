@@ -5,7 +5,7 @@
 #include <WiFi.h>
 #include <SpotifyEsp32.h>
 #include <SPI.h>
-#include <ESP32Encoder.h>
+#include <Encoder.h>
 
 #define TFT_CS 7
 #define TFT_RST 10
@@ -15,20 +15,20 @@
 
 Adafruit_ST7735 tft = Adafruit_ST7735(TFT_CS, TFT_A0, TFT_RST);
 
-char* SSID = "INSERT_SSID_HERE";
-char* PASSWORD = "INSERT_PASSWORD_HERE";
-const char* CLIENT_ID = "CLIENT_ID";
-const char* CLIENT_SECRET = "CLIENT_SECRET";
+const char* SSID = "FRITZ!Box 7520 FD";
+const char* PASSWORD = "64482160650603195528";
+const char* CLIENT_ID = "923697fca66349e1a83111c086a3df4d";
+const char* CLIENT_SECRET = "2e5187a9d10a4fc9b18c97211234d8ad";
 Spotify sp(CLIENT_ID, CLIENT_SECRET);
 
 const int switchPins[] ={2, 5, 9};
 const int numSwitches = 3;
 
-ESP32Encoder encoder;
 const int en_CLK_PIN = 0;
 const int en_DT_PIN = 1;
 const int en_SW_PIN = 3;
 long lastEncoderValue = 0;
+Encoder encoder(en_CLK_PIN, en_DT_PIN);
 
 String lastArtist = "";
 String lastTrackname = "";
@@ -37,8 +37,9 @@ unsigned long lastUpdate = 0;
 
 void setup() {
     Serial.begin(115200);
+    delay(3000);
     tft.initR(INITR_BLACKTAB);
-    tft.setRotation(1);
+    tft.setRotation(3);
     Serial.println("TFT Initialized!");
     tft.fillScreen(ST77XX_BLACK);
 
@@ -58,24 +59,28 @@ void setup() {
     while(!sp.is_auth())
     {
         sp.handle_client();
+        delay(10);
     }
     Serial.println("Connected to Spotify!");
+
+    Serial.println("Your refresh token is:");
+    Serial.println(sp.get_user_tokens().refresh_token);
 
     for (int i = 0; i < numSwitches; i++)
     {
     pinMode(switchPins[i], INPUT_PULLUP);
     }
     
-    ESP32Encoder::useInternalWeakPullResistors = puType::up;
-    encoder.attachHalfQuad(en_CLK_PIN, en_DT_PIN);
-    encoder.setCount(0);
+    pinMode(en_CLK_PIN, INPUT_PULLUP);
+    pinMode(en_DT_PIN, INPUT_PULLUP);
+    encoder.write(0);
     pinMode(en_SW_PIN, INPUT_PULLUP);
 }
 
 
 void loop() {
     if (millis() - lastUpdate > 2000){
-        lastUpdate = millis()
+        lastUpdate = millis();
         String currentArtist = sp.current_artist_names();
         String currentTrackname = sp.current_track_name();
 
@@ -100,19 +105,21 @@ void loop() {
     int state3 = digitalRead(switchPins[2]);
 
     if (state1 == LOW){
-        sp.previos();
+        sp.previous();
+        delay(300);
     }
     else if (state2 == LOW){
         sp.start_resume_playback();
+        delay(300);
     }
     else if (state3 == LOW){
         sp.skip();
+        delay(300);
     }
 
-    long currentEncoderValue = encoder.getCount();
+    long currentEncoderValue = encoder.read();
     if (currentEncoderValue != lastEncoderValue){
         int Volume = (int)constrain(currentEncoderValue, 0, 100);
-        encoder.setCount(Volume);
         sp.set_volume(Volume);
         lastEncoderValue = Volume;
     }
