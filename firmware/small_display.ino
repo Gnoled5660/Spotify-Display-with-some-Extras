@@ -4,12 +4,14 @@
 #include <WiFi.h>
 #include "time.h"
 
+#define OLED_SDA 8
+#define OLED_SCL 7
 #define SCREEN_WIDTH 128 
 #define SCREEN_HEIGHT 64
 Adafruit_SSD1306 display(SCREEN_WIDTH, SCREEN_HEIGHT, &Wire, -1);
 
-const char* ssid     = "MY_WLAN";
-const char* password = "WLAN_PASSWORT";
+const char* ssid     = "FRITZ!Box 7520 FD";
+const char* password = "64482160650603195528";
 
 const char* ntpServer = "pool.ntp.org";
 const long  gmtOffset_sec = 3600;  
@@ -19,6 +21,8 @@ unsigned long lastDisplayUpdate = 0;
 
 void setup() {
   Serial.begin(115200);
+
+  Wire.begin(OLED_SDA, OLED_SCL);
 
   if(!display.begin(SSD1306_SWITCHCAPVCC, 0x3C)) { 
     Serial.println("OLED not found");
@@ -52,7 +56,6 @@ void updateDisplay() {
     Serial.println("Synch..");
     return;
   }
-
   display.clearDisplay();
   
   display.setTextSize(2);
