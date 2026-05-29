@@ -10,8 +10,8 @@
 #define SCREEN_HEIGHT 64
 Adafruit_SSD1306 display(SCREEN_WIDTH, SCREEN_HEIGHT, &Wire, -1);
 
-const char* ssid     = "FRITZ!Box 7520 FD";
-const char* password = "64482160650603195528";
+const char* ssid     = xxx
+const char* password = xxx
 
 const char* ntpServer = "pool.ntp.org";
 const long  gmtOffset_sec = 3600;  
