@@ -15,10 +15,10 @@
 
 Adafruit_ST7735 tft = Adafruit_ST7735(TFT_CS, TFT_A0, TFT_RST);
 
-const char* SSID = "FRITZ!Box 7520 FD";
-const char* PASSWORD = "64482160650603195528";
-const char* CLIENT_ID = "923697fca66349e1a83111c086a3df4d";
-const char* CLIENT_SECRET = "2e5187a9d10a4fc9b18c97211234d8ad";
+const char* SSID = xx
+const char* PASSWORD = xxx
+const char* CLIENT_ID = xxx
+const char* CLIENT_SECRET = xx
 Spotify sp(CLIENT_ID, CLIENT_SECRET);
 
 const int switchPins[] ={2, 5, 9};
